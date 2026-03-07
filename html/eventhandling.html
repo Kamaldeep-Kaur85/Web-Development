@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EVENT HANDLING</h1>
+    <P>when we click button - any action happens that is called event</button></P>
+    <p>ex. onchange , onclick, onmouseover, onmouseout</p>
+    <button onclick="handleClick()">Click Me</button>
+    <br>
+    <button id="btn" onmouseout="handleMouseOut()">Mouse Out</button>
+    <div id="op"></div> 
+    <script>
+        function handleClick(){
+            document.getElementById("op").innerHTML="this function called after clicking the button";
+        }
+        function handleMouseOut(){
+            document.getElementById("btn").style.backgroundColor="red";
+        }
+    </script>
+</body>
+</html>

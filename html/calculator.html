@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: azure;
+    }
+    .calc{
+        padding: 20px;
+        border: 1px solid black;
+        text-align: center;
+        background-color: rgb(217, 121, 121);
+        
+    }
+   
+    input, button{
+        margin:5px;
+        padding: 6px;
+}
+</style>
+<body>
+    <div class="calc">
+        <input type="number" id="a" placeholder="A">
+        <input type="number" id="b" placeholder="B"><br><br>
+        <button onclick="calc('+')">+</button>
+        <button onclick="calc('-')">-</button>
+        <button onclick="calc('*')">*</button>      
+        <button onclick="calc('/')">/</button><br><br>
+        <p id="res" > Result </p>
+    </div>
+    <script>
+        function calc(op){
+            let a=document.getElementById("a").value;
+            let b=document.getElementById("b").value;
+           
+            document.getElementById("res").textContent="Result: "+ eval(a+op+b);
+        }
+    </script>
+</body>
+</html>

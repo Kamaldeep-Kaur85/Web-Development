@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1" type="number" placeholder="enter number"> <br><br>
+     <input id="num2" type="number" placeholder="enter number"> <br><br>
+     <button onclick="add()">+</button>
+     <button onclick="sub()">-</button>
+     <button onclick="mul()">*</button>
+     <button onclick="div()">/</button>
+     <br><br>
+     <p id="res">result</p>
+</body>
+<script>
+// Helper to read and parse input values
+function getNums() {
+  const n1 = document.getElementById("num1").value;
+  const n2 = document.getElementById("num2").value;
+  const a = Number(n1);
+  const b = Number(n2);
+  return [a, b];
+}
+
+function showResult(value) {
+  document.getElementById("res").textContent = value;
+}
+
+function validate(a, b) {
+  if (isNaN(a) || isNaN(b)) {
+    showResult('Enter valid numbers');
+    return false;
+  }
+  return true;
+}
+
+function add() {
+  const [a, b] = getNums();
+  if (!validate(a, b)) return;
+  showResult(a + b);
+}
+
+function mul() {
+  const [a, b] = getNums();
+  if (!validate(a, b)) return;
+  showResult(a * b);
+}
+
+function sub() {
+  const [a, b] = getNums();
+  if (!validate(a, b)) return;
+  showResult(a - b);
+}
+
+function div() {
+  const [a, b] = getNums();
+  if (!validate(a, b)) return;
+  if (b === 0) {
+    showResult('Cannot divide by zero');
+    return;
+  }
+  showResult(a / b);
+}
+</script>
+</html>

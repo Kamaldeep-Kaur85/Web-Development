@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form onsubmit="validation(event)">
+<label for="name">enter your name:</label>
+<input type="text" id="name"><br><br>
+<label for="email">enter your email:</label>
+<input type="text" id="email"><br><br>
+<label for="password">enter your password:</label>
+<input type="password" id="password"><br><br>
+<label for="role">role</label>
+<select name="" id="tab" onchange="showmsg()">
+    <option value="">--select--</option>
+    <option value="admin">admin</option>
+    <option value="user">user</option>
+</select>
+<br>
+<p id="otp"></p>
+<br><br>
+<button type="submit">Submit</button>
+    </form>
+    <script>
+        function showmsg(){
+            let role=document.getElementById("tab").value;
+            if (role!==""){
+                document.getElementById("otp").innertext="you have selected "+role;
+            }
+            else{
+                document.getElementById("otp").innertext="";}
+        }
+        function validation(event){
+            event.preventDefault(); 
+            let valid= true;// Prevent form submission
+            let name=document.getElementById("name").value.trim();
+            let email=document.getElementById("email").value.trim();
+            let password=document.getElementById("password").value;
+            if (name===""){
+                alert("enter your name:");
+                return false;
+            }
+            let empat=/^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            if (email===""){
+                alert("enter your email:");
+                return false
+            }
+            else if (!empat.test(email)){
+                alert("enter valid email");
+                return false;
+            }
+
+            let ps=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (password===""){
+                alert("enter your password:");
+                return false;
+            }
+            else if (!ps.test(password)){
+                alert("password must contain minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:");
+                return false;
+            }
+            alert("form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>

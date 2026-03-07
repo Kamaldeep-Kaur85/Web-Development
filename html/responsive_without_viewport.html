@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+ 
+    <style>
+        .grid{
+           display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box{
+            flex: 1;
+            padding: 20px;
+            background: white;
+            border: 2px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .grid{
+                flex-direction: column;
+             
+            }
+              body {
+                padding: 20px;
+              background-color:  rgb(237, 239, 168);
+            }
+        }
+        @media (max-width: 900px) and (min-width: 600px){
+            .grid{
+                flex-direction: row;
+               
+            }
+            
+              body {
+                padding: 20px;
+           background-color: rgb(243, 140, 142);
+            }
+        }
+        @media (min-width: 900px){
+            .grid{
+                flex-direction: row;
+                
+            }
+              body {
+             
+              background-color:  lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box" id="item1">column 1</div>
+        <div class="box" id="item2">column 2</div>
+        <div class="box" id="item3">column 3</div>
+        <div class="box" id="item4">column4</div>
+    </div>
+</body>
+</html>

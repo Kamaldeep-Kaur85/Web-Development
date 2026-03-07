@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ad {
+            display: block;
+            border-radius: 90px;
+            text-align: center;
+            border:solid rgb(250, 121, 153);
+            background-color: rgb(234, 160, 182);
+            padding: 10px;
+
+        }
+        #sh{
+            size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>skipping advertisement</h2>
+    <br>
+    <div id="ad">
+        <h2>sale sale !!!</h2>
+        <p>Buy one get one free!!!</p>
+        <button id="sk" onclick="skip()">skip ad</button>
+    </div>
+    <br>
+    <p>"Cont." is a common abbreviation for "continued," indicating text or a story flows to the next page, but it can
+        also stand for other words like containing, content, continent, or contract, depending on the context, often
+        used in lists, scripts, or academic writing where space is limited </p>
+    <button id="sh" onclick="show()">show ad</button>
+    <script>
+        function skip() {
+            document.getElementById("ad").style.display = "none";
+        }
+        function show() {
+            document.getElementById("ad").style.display = "block";
+             document.getElementById("sh").style.backgroundColor="aquamarine";
+        }
+    </script>
+</body>
+
+</html>

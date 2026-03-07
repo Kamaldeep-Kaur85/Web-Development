@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="greet()">Click me</button>
+    <script>
+        console.log("Hello, World!");
+        function greet(){
+            document.write("Hello, World!");
+        }
+        //array
+        //let arr=new array("1","2","3",4,5);
+        let num=[1,2,3,4,5];
+        for (let i=0;i<5;i++){
+            document.write(num[i],"<br>");
+        }
+        num.unshift(0);
+        num.push(6);
+        document.write(num.indexOf(3),"<br>");
+        //matrix
+        let matrix=[[1,2],[2,3]];
+    </script>
+</body>
+</html>

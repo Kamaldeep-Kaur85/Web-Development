@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="num" type="number" placeholder="Enter day number (1-7)">
+    <button onclick="day()">day</button>
+    <p id="res">Result will appear here</p>
+
+</body> 
+<script>
+function day(){
+  const nVal = document.getElementById("num").value;
+  const n = Number(nVal);
+  const resEl = document.getElementById("res");
+  if (!nVal || isNaN(n)) {
+    resEl.textContent = 'Please enter a number between 1 and 7';
+    return;
+  }
+  let message;
+  switch (n) {
+    case 1:
+      message = 'Monday';
+      break;
+    case 2:
+      message = 'Tuesday';
+      break;
+    case 3:
+      message = 'Wednesday';
+      break;
+    case 4:
+      message = 'Thursday';
+      break;
+    case 5:
+      message = 'Friday';
+      break;
+    case 6:
+      message = 'Saturday';
+      break;
+    case 7:
+      message = 'Sunday';
+      break;
+    default:
+      message = 'Invalid day (enter 1–7)';
+  }
+  resEl.textContent = message;
+}
+</script>
+</html>

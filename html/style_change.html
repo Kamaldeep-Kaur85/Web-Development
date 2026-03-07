@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>changing style</h2>
+    <p id="demo">this paragraph changes style</p>
+<button onclick="change()">click to chnage style</button>
+<script>
+    function change(){
+        document.getElementById("demo").style.color="red";
+        document.getElementById("demo").style.fontSize="30px";
+    }
+</script>
+</body>
+</html>

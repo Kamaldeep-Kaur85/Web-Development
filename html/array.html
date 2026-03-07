@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        document.write("Array elements:<br>");
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i], "<br>");
+        }
+        arr.push(6);
+        arr.unshift(0);
+        document.write("Array elements after push and unshift:<br>");
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i], "<br>");
+        }
+        document.write("Index of 3 is: " + arr.indexOf(3), "<br>");
+        arr.includes(4) ? document.write("4 is present in the array<br>") : document.write("4 is not present in the array<br>");
+      
+        arr.pop(); //remove last element
+        arr.shift(); //remove first element   
+        arr.splice(2, 2); //remove 2 element at index 2
+          for (let a of arr) {
+            document.write(a, "<br>");
+        }
+    </script>
+</body>
+
+</html>

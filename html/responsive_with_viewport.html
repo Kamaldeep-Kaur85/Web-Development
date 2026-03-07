@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <!-- this is viewport meta tag -->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .box {
+            background-color: #510303;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            font-weight: bold;
+        }
+      
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+               
+                gap: 15px;
+            }
+            
+            body {
+                padding: 10px;
+              
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .box {
+                padding: 20px;
+                font-size: 16px;
+                  
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box" id="item1">column 1</div>
+        <div class="box" id="item2">column 2</div>
+        <div class="box" id="item3">column 3</div>
+        <div class="box" id="item4">column4</div>
+    </div>
+    
+</body>
+</html>

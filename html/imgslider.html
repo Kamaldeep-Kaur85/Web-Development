@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            height: 400px;
+            cursor: pointer;
+            border-radius: 10%;
+        }
+        body{
+            text-align: center;
+            background-color: azure;
+        }
+        h1{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <img onclick="slider()" id="s" src="image.png" alt="">
+    
+    <script>
+        let i=0;
+        let imgs=["image.png","https://i.pinimg.com/736x/2d/95/e5/2d95e5886fc4c65a6778b5fee94a7d59.jpg","https://www.w3schools.com/howto/img_fjords.jpg","https://www.w3schools.com/howto/img_mountains.jpg","https://www.w3schools.com/howto/img_lights.jpg"];
+        function slider(){
+            if (i>=imgs.length){
+                i=0;
+            }
+            document.getElementById("s").src=imgs[i];
+            i=i+1;
+        }
+        
+    </script>
+</body>
+</html>

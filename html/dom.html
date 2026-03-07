@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Welcome to My Website</h1>
+    <h1 class="title1">This is a subtitle</h1>
+    <h1 class="title1">This is a subtitle</h1>
+    <h1 class="txt">get element by class</h1>
+    <h1 class="txt"> get element by class</h1>
+    <div>
+        box1
+    </div>
+    <div>box2</div>
+    <img src="image.png" alt="">
+
+    <script>
+        let heading = document.getElementById("title");
+        heading.style.color = "blue";
+
+        let subtitle = document.querySelector(".title1");
+        subtitle.style.color = "green";
+        subtitle.forEach(element => {
+            element.style.fontSize = "30px";
+            element.style.color = "green";
+        });
+ 
+       let text = document.getElementsByClassName("txt");
+       text[0].style.color = "orange";
+
+        let div = document.getElementsByTagName("div");
+        div[0].style.fontSize = "40px";
+        div[0].style.color = "red";
+        div[0].style.backgroundColor = "yellow";
+        div[1].style.color = "purple";
+
+        let image = document.getElementsByTagName("img");
+        image[0].style.width = "200px";
+        image[0].style.borderRadius = "50%";
+        image[0].style.border = "5px solid black";
+        image[0].style.opacity = "0.8";
+        image[0].style.fillOpacity = "red";
+        image[0].style.boxShadow = "10px 10px 5px grey";
+
+    </script>
+</body>
+
+</html>

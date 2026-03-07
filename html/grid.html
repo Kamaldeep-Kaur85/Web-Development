@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+            gap: 20px;
+        }
+        .box{
+            padding: 10px;
+            background-color: rgb(159, 237, 237);
+            color: black;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            text-align: center;
+        }
+        #box1{
+            grid-row: span 2;
+             background-color: rgb(93, 212, 75);
+        }
+        #box2{
+            grid-column: span 2;
+             background-color: rgb(205, 180, 107);
+        }
+    </style>
+</head>
+<body>
+    <h1>grid</h1>
+    <divc id="grid">
+        <div class="box" id="box1">box 1</div>
+         <div class="box" id="box2">box 2</div>
+          <div class="box" id="box3">box  3</div>
+           <div class="box" id="box4">Box 4</div>
+    </div>
+</body>
+</html>

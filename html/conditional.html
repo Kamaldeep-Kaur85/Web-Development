@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label ">enter age</label><input type="text" id="age" placeholder="Enter your age">
+    <button onclick="elg()">check</button><br><br>
+    <label for="">enter loop name</label>
+    <input type="text" id="loop" placeholder="Enter loop">
+    <button onclick="fun()">click</button>
+    <script>
+      function elg(){ age=document.getElementById("age");
+        if (age>=18){
+            document.write("You are eligible to vote");
+        }
+        else{
+            document.write("You are not eligible to vote");
+        }}
+        function fun(){
+        let num=[1,2,3,4,5];
+        let loop=document.getElementById("loop");
+        if (loop==="for"){  
+        for (let i=0;i<5;i++){
+            document.write(num[i],"<br>");
+        }
+        }
+        else if (loop==="while"){
+            let a=0;
+            while (a<5){
+                document.write(num[a],"<br>");
+                a++;
+            }
+        }
+        else{
+            document.write("<br>");
+           let b=0;
+        switch(b){
+            case 0:
+                document.write(num[0],"<br>");
+                break;
+            case 1:
+                document.write(num[1],"<br>");  
+                break;
+            case 2:
+                document.write(num[2],"<br>");
+                break; 
+            case 3:
+                document.write(num[3],"<br>");
+                break;
+            case 4:
+                document.write(num[4],"<br>");         
+            default:
+                document.write("Invalid index","<br>");
+        }
+        }}
+      
+        
+    </script>
+</body>
+</html>
